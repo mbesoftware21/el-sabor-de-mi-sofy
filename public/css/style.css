@@ -750,6 +750,56 @@ body {
     transform: none;
 }
 
+/* Install Button */
+.install-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    z-index: 999;
+    background: linear-gradient(135deg, var(--hot-pink), var(--coral));
+    color: white;
+    border: 3px solid white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-family: 'Fredoka', cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 30px rgba(255, 20, 147, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    animation: bounce 2s ease-in-out infinite, glow 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 6px 30px rgba(255, 20, 147, 0.6);
+    }
+    50% {
+        box-shadow: 0 6px 40px rgba(255, 20, 147, 0.9), 0 0 20px rgba(255, 105, 180, 0.8);
+    }
+}
+
+.install-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    animation-play-state: paused;
+}
+
+.install-btn i {
+    font-size: 1.3rem;
+}
+
 /* Footer */
 .footer {
     margin: 2rem 1.5rem 1rem;
@@ -893,6 +943,13 @@ body {
     
     .footer-content {
         padding: 1.8rem 1.2rem;
+    }
+    
+    .install-btn {
+        bottom: 1.5rem;
+        right: 1rem;
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
     }
 }
 
